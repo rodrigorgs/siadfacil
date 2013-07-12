@@ -8,7 +8,11 @@
 	  <%= yield :head %>
   </head>
   <body>
-  	Alo mundo!
+  	<%= params['numero'] %>
+  	<form>
+  		<input type="text" name="numero" />
+  		<input type="submit" value="Consultar" />
+  	</form>
   <%= yield %>
   </body>
 </html>
