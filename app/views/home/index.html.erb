@@ -8,6 +8,9 @@
 	  <%= yield :head %>
   </head>
   <body>
+    <% if @pessoa %>
+      E-mail <%= @pessoa.email %> adicionado.
+    <% end %>
   	<%= params['numero'] %>
   	<form>
   		<input type="text" name="numero" />
@@ -15,6 +18,14 @@
   	</form>
   <%= yield %>
   
-  <%= @resultado %>
+  <% if @resultado %>
+    <%= @resultado %>
+
+    <%= form_for :pessoa, url: pessoas_path do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <%= f.submit %>
+    <% end %>
+  <% end %>
   </body>
 </html>
