@@ -1,31 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
-  <head>
-	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	  <title>index.html</title>
-	  <%= javascript_include_tag :defaults %>
-	  <%= yield :head %>
-  </head>
-  <body>
-    <% if @pessoa %>
-      E-mail <%= @pessoa.email %> adicionado.
-    <% end %>
-  	<%= params['numero'] %>
-  	<form>
-  		<input type="text" name="numero" />
-  		<input type="submit" value="Consultar" />
-  	</form>
-  <%= yield %>
-  
-  <% if @resultado %>
-    <%= @resultado %>
+<% if @pessoa %>
+  E-mail <%= @pessoa.email %> adicionado.
+<% end %>
+<%= params['numero'] %>
+<form>
+	<input type="text" name="numero" />
+	<input type="submit" value="Consultar" />
+</form>
 
-    <%= form_for :pessoa, url: pessoas_path do |f| %>
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-      <%= f.submit %>
-    <% end %>
+<% if @resultado %>
+  <%= @resultado %>
+
+  <%= form_for :pessoa, url: pessoas_path do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.submit %>
   <% end %>
-  </body>
-</html>
+<% end %>
