@@ -8,10 +8,6 @@
 </head>
 <body>
 
-<% flash.each do |k, v| %>
-  <div class='flash <%= k %>'><%= v %></div>
-<% end %>
-
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container-responsive">
@@ -26,6 +22,10 @@
 </header>
 
 <div class="container-responsive">
+  <% flash.each do |k, v| %>
+    <div class='<%= k %>'><%= v %></div>
+  <% end %>
+
   <%= yield %>
 </div>
 
