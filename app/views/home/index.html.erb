@@ -1,11 +1,15 @@
 <% if @pessoa %>
   E-mail <%= @pessoa.email %> adicionado.
 <% end %>
-<%= params['numero'] %>
-<form>
-	<input type="text" name="numero" />
-	<input type="submit" value="Consultar" />
-</form>
+
+
+<div class="center hero-unit">
+  <form>
+  	<input type="text" name="numero" value="<%= params['numero'] %>" maxlength="18" class="input-processo" placeholder="Número do Processo"/><br />
+  	<input type="submit" value="Consultar" class="btn btn-large btn-primary btn-processo" />
+  </form>
+</div>
+
 
 <% if @resultado %>
   <%= @resultado %>

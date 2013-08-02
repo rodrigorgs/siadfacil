@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
     num = "#{params['numero']}"
     
-    if (num)
+    if (!num.empty?)
       agent = Mechanize.new
       agent.log = Logger.new "mech.log"
       agent.user_agent_alias = 'Mac Safari'

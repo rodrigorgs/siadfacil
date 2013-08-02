@@ -12,7 +12,22 @@
   <div class='flash <%= k %>'><%= v %></div>
 <% end %>
 
-<%= yield %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container-responsive">
+      <%= link_to "SiadFácil", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Início", root_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="container-responsive">
+  <%= yield %>
+</div>
 
 </body>
 </html>
