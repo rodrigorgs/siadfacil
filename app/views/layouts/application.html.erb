@@ -11,7 +11,7 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container-responsive">
-      <%= link_to "SiadFácil", root_path, id: "logo" %>
+      <%= link_to "SiadFácil", root_path, id: "logo", class: "brand" %>
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Início", root_path %></li>
@@ -21,12 +21,16 @@
   </div>
 </header>
 
-<div class="container-responsive">
-  <% flash.each do |k, v| %>
-    <div class='<%= k %>'><%= v %></div>
-  <% end %>
-
-  <%= yield %>
+<div id="wrap" class="container-responsive">
+	<div class="row-fluid">
+		<% flash.each do |k, v| %>
+			<div class='<%= k %>'><%= v %></div>
+  		<% end %>
+  	</div>
+  	<%= yield %>
+  	<div id="footer" class="row-fluid">
+		<p>Fork on <a href="http://github.com/rodrigorgs/siadfacil" target="_blank">Github</a></p>	
+	</div>
 </div>
 
 </body>
