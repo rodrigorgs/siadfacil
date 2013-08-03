@@ -1,8 +1,21 @@
-@import "bootstrap";
-
+/* General Options */
 .center {
   text-align: center;
 }
+
+
+/* Layout */
+body {
+  padding-top: 60px;
+}
+
+#wrap{
+  text-align: center;
+}
+
+
+
+
 
 .input-processo[class=input-processo] {
   width: 150px;
@@ -10,12 +23,12 @@
   font-size: 16px;
 }
 
-body {
-  padding-top: 60px;
-}
 
 .success {
   @extend .alert;
   @extend .alert-success;
   margin-bottom: 0px;
 }
+
+
+/* Footer */
