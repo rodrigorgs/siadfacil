@@ -2,21 +2,30 @@
   E-mail <%= @pessoa.email %> adicionado.
 <% end %>
 
-
-<div class="center hero-unit">
-  <form>
-  	<input type="text" name="numero" value="<%= params['numero'] %>" maxlength="18" class="input-processo" placeholder="Número do Processo"/><br />
-  	<input type="submit" value="Consultar" class="btn btn-large btn-primary" />
-  </form>
+<div class="row-fluid center">
+	<h1 class="title">SiadFácil</h1>
+	<p class="lead">Alternativa simples e elegante ao SIAD</p>
 </div>
-
-
-<% if @resultado %>
-  <%= @resultado %>
-
-  <%= form_for :pessoa, url: pessoas_path do |f| %>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-    <%= f.submit %>
-  <% end %>
-<% end %>
+<div class="row-fluid">
+	<div class="span6 offset3">
+		<form class="form-search well">
+			<div class="input-append">
+				<input type="text" name="numero" value="<%= params['numero'] %>" maxlength="18" class="input-processo" placeholder="Número do Processo"/>
+			    <button type="submit" class="btn btn-large btn-primary">
+			    	<i class="icon-search"></i>
+		    	</button>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="row-fluid">
+	<% if @resultado %>
+	  <%= @resultado %>
+	
+	  <%= form_for :pessoa, url: pessoas_path do |f| %>
+	    <%= f.label :email %>
+	    <%= f.text_field :email %>
+	    <%= f.submit %>
+	  <% end %>
+	<% end %>
+</div>

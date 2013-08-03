@@ -1,21 +1,37 @@
-@import "bootstrap";
-
+/* General Options */
 .center {
   text-align: center;
 }
+.left{
+  text-align: left;
+}
+
+
+/* Layout */
+body {
+  padding-top: 60px;
+}
+
+#wrap{
+  padding: 70px 0 80px;
+  text-align: center;
+}
+
+
 
 .input-processo[class=input-processo] {
   width: 150px;
   padding: 10px;
   font-size: 16px;
+  height:22px;
 }
 
-body {
-  padding-top: 60px;
-}
 
 .success {
   @extend .alert;
   @extend .alert-success;
   margin-bottom: 0px;
 }
+
+
+/* Footer */
