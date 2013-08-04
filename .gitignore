@@ -17,5 +17,6 @@
 *.class
 *.pyc
 *.pyo
+mech.log
 mech.log.project
 .project
